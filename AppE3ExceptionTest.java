@@ -11,9 +11,8 @@ class AppE3ExceptionTest {
 		var test = new AppE3Exception();
 		try {
 			test.printThruList();
-		} catch (ArrayIndexOutOfBoundsException aioobe) {
-			aioobe.getMessage();
-		}
+		} finally  {
+			
 	}
 
 }
