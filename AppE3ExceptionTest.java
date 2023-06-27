@@ -9,10 +9,10 @@ class AppE3ExceptionTest {
 	@Test
 	void throwsArraysOutOfBoundIndexException() {
 		var test = new AppE3Exception();
-		try {
-			test.printThruList();
-		} finally  {
-			
+		ArrayIndexOutOfBoundsException aioobe = assertThrows(ArrayIndexOutOfBoundsException.class, ()-> test.printThruList(), "Expected to print, but out of bounds");
+		String expectedMessage = "Expected to print, but out of bounds";
+		String actualMessage = aioobe.getMessage();
+		assertTrue(actualMessage.contains(expectedMessage));
 	}
 
 }
